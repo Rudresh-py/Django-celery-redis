@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'django_celery_results',
-    'django_celery_beat'
+    'django_celery_beat',
+    'send_mail_app'
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,13 @@ CELERY_RESULT_BACKEND = 'django-db'
 
 # Celery beat
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
+# bjnwafcksijpnadd
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'rudresha.gangaswamaiah@softsuave.com'
+EMAIL_HOST_PASSWORD = "bjnwafcksijpnadd"
+DEFAULT_FROM_EMAIL = 'Celery <rudresha.gangaswamaiah@softsuave.com>'
